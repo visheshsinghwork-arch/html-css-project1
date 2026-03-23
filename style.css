@@ -32,6 +32,15 @@ button{
     transform: translateY(0);
   }
 }
+@keyframes floatSlide{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-50%);
+    }
+}
+  
 body{
     font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
@@ -155,10 +164,50 @@ color: var(--gold);}
 }
 
 
-.projects{
+.resume{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     height: 150vh;
+}
+
+
+.project-slider{
+    padding: 100px 50px;
+    overflow: hidden;
+}
+.project-slider h2{
+    text-align: center;
+    color: white;
+    margin-bottom: 40px;
+}
+
+.slider{
+    display: flex;
+    gap: 20px;
+    width: max-content;
+    animation:floatSlide 20s linear
+    infinite;
+}
+
+.slide{
+    min-width: 250px;
+    height: 200px;
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #222;
+    transition: 0.4s;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.slide:hover{
+    transform: scale(1.1);
+    z-index: 2;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.7);
+    background: #1a1a1a;
 }
 
 .card{height: 300px;
