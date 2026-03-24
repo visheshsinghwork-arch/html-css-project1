@@ -87,15 +87,16 @@
     <section class="contact">
         <h2>CONTACT</h2>
         <P>let's content and build somthing great.</P>
-        <button>Contact me</button>
+        <button onclick="Clickme()">Contact me</button>
     </section>
 
-<audio src="intro-music">
+<audio  id="intro-music">
     <source src="./image/music.mp3" type="audio/mpeg">
 </audio>
 <script>
-    window.addEventListener("click",() =>
-{
+    let Clickme=()=>{
+   
+
     const music = document.getElementById("intro-music");
     if (music.paused) {
         music.volume = 0.15;
@@ -104,8 +105,8 @@
             music.pause();
             music.currentTime = 0;
         }, 10000);
-     }
-},{once:true});
+     }{once:true}
+    }
 </script>
 </body>
 
